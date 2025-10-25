@@ -1,0 +1,13 @@
+# HR Attendance Automation Crontab
+# Generated from .env configuration
+# Times are in UTC (converted from IST)
+
+# Login at 09:30 IST (03:55 UTC) Monday-Saturday
+# Random delay of ±5 minutes handled by scheduler
+55 3 * * 1-6 cd /app && node scripts/login.js >> /app/logs/cron.log 2>&1
+
+# Logout at 19:30 IST (13:55 UTC) Monday-Saturday
+# Random delay of ±5 minutes handled by scheduler
+55 13 * * 1-6 cd /app && node scripts/logout.js >> /app/logs/cron.log 2>&1
+
+# Keep an empty line at the end of file for cron to work properly

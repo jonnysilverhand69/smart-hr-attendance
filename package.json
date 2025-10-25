@@ -1,0 +1,52 @@
+{
+  "name": "hr-attendance-automation",
+  "version": "1.0.0",
+  "description": "Enterprise-ready automated attendance system for HR ERP portal with Docker, CLI, and notifications",
+  "type": "module",
+  "bin": {
+    "hr-attendance": "./cli.js"
+  },
+  "scripts": {
+    "login": "node scripts/login.js",
+    "logout": "node scripts/logout.js",
+    "cli": "node cli.js",
+    "setup": "node cli.js setup",
+    "status": "node cli.js status",
+    "test:login": "playwright test tests/login.spec.js --headed",
+    "test:logout": "playwright test tests/logout.spec.js --headed",
+    "install:scheduler": "node scripts/install-scheduler-universal.js",
+    "uninstall:scheduler": "node scripts/uninstall-scheduler-universal.js",
+    "generate:crontab": "node scripts/generate-crontab.js"
+  },
+  "keywords": [
+    "automation",
+    "attendance",
+    "playwright",
+    "docker",
+    "cli",
+    "notifications",
+    "google-chat",
+    "discord",
+    "hr",
+    "erp"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@playwright/test": "^1.40.0",
+    "boxen": "^7.1.1",
+    "chalk": "^5.3.0",
+    "commander": "^11.1.0",
+    "dotenv": "^16.3.1",
+    "inquirer": "^9.2.12",
+    "node-fetch": "^3.3.2",
+    "ora": "^7.0.1"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/hr-attendance-automation"
+  }
+}

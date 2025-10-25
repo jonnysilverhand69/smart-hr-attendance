@@ -1,0 +1,43 @@
+# Dependencies
+node_modules
+npm-debug.log
+package-lock.json
+
+# Environment files (will be mounted)
+.env.example
+
+# Git
+.git
+.gitignore
+.github
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+
+# macOS
+.DS_Store
+
+# Logs (will be in volumes)
+logs
+*.log
+
+# Screenshots (will be in volumes)
+screenshots
+
+# Test files
+test-results
+playwright-report
+playwright/.cache
+
+# Documentation (not needed in container)
+*.md
+!README.md
+
+# Config (will be in volumes)
+.config
+
+# Claude
+.claude

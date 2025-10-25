@@ -1,0 +1,79 @@
+# ========================================
+# PERSONAL DATA - NEVER COMMIT THESE!
+# ========================================
+
+# Environment variables (contains USERNAME, PASSWORD, WEBHOOKS)
+.env
+.env.*
+!.env.example
+
+# User configuration and state
+.config/
+profiles.json
+state.json
+
+# Screenshots (may contain personal info from HR portal)
+screenshots/
+*.png
+*.jpg
+*.jpeg
+
+# Videos (may contain personal info)
+videos/
+*.mp4
+*.webm
+
+# Logs (contain usernames, timestamps, personal data)
+logs/
+*.log
+*.log.*
+
+# ========================================
+# BUILD & DEPENDENCIES
+# ========================================
+
+# Node modules
+node_modules/
+package-lock.json
+
+# Playwright cache
+test-results/
+playwright-report/
+playwright/.cache/
+
+# ========================================
+# OS & IDE
+# ========================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+
+# ========================================
+# TEMPORARY & GENERATED FILES
+# ========================================
+
+# Temp files
+tmp/
+temp/
+*.tmp
+
+# Task scheduler files (may contain paths with usernames)
+*.plist
+login-task.xml
+logout-task.xml

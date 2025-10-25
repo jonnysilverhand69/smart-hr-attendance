@@ -1,0 +1,101 @@
+name: HR Attendance Automation
+
+on:
+  schedule:
+    # Login at 9:25 AM IST (3:55 AM UTC) Monday-Saturday
+    - cron: '55 3 * * 1-6'
+    # Logout at 7:25 PM IST (1:55 PM UTC) Monday-Saturday
+    - cron: '55 13 * * 1-6'
+
+  workflow_dispatch: # Allow manual trigger
+    inputs:
+      action:
+        description: 'Action to perform'
+        required: true
+        default: 'login'
+        type: choice
+        options:
+          - login
+          - logout
+
+jobs:
+  attendance:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright browsers
+        run: npx playwright install chromium --with-deps
+
+      - name: Determine action
+        id: determine-action
+        run: |
+          if [ "${{ github.event_name }}" == "workflow_dispatch" ]; then
+            echo "action=${{ github.event.inputs.action }}" >> $GITHUB_OUTPUT
+          else
+            # Determine based on time
+            hour=$(date -u +%H)
+            if [ $hour -eq 3 ] || [ $hour -eq 4 ]; then
+              echo "action=login" >> $GITHUB_OUTPUT
+            else
+              echo "action=logout" >> $GITHUB_OUTPUT
+            fi
+          fi
+
+      - name: Run Login
+        if: steps.determine-action.outputs.action == 'login'
+        env:
+          HR_USERNAME: ${{ secrets.HR_USERNAME }}
+          HR_PASSWORD: ${{ secrets.HR_PASSWORD }}
+          HR_URL: ${{ secrets.HR_URL }}
+          LOGIN_TIME: ${{ secrets.LOGIN_TIME || '09:30' }}
+          LOGOUT_TIME: ${{ secrets.LOGOUT_TIME || '19:30' }}
+          GOOGLE_CHAT_WEBHOOK: ${{ secrets.GOOGLE_CHAT_WEBHOOK }}
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+          NOTIFICATIONS_ENABLED: ${{ secrets.NOTIFICATIONS_ENABLED || 'true' }}
+          HEADLESS: true
+          SCREENSHOTS_ENABLED: true
+          TZ: Asia/Kolkata
+          RETRIES: 3
+        run: npm run login
+
+      - name: Run Logout
+        if: steps.determine-action.outputs.action == 'logout'
+        env:
+          HR_USERNAME: ${{ secrets.HR_USERNAME }}
+          HR_PASSWORD: ${{ secrets.HR_PASSWORD }}
+          HR_URL: ${{ secrets.HR_URL }}
+          LOGIN_TIME: ${{ secrets.LOGIN_TIME || '09:30' }}
+          LOGOUT_TIME: ${{ secrets.LOGOUT_TIME || '19:30' }}
+          GOOGLE_CHAT_WEBHOOK: ${{ secrets.GOOGLE_CHAT_WEBHOOK }}
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+          NOTIFICATIONS_ENABLED: ${{ secrets.NOTIFICATIONS_ENABLED || 'true' }}
+          HEADLESS: true
+          SCREENSHOTS_ENABLED: true
+          TZ: Asia/Kolkata
+          RETRIES: 3
+        run: npm run logout
+
+      - name: Upload screenshots on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: screenshots-${{ github.run_number }}
+          path: screenshots/
+          retention-days: 7
+
+      - name: Notify on failure
+        if: failure()
+        run: |
+          echo "::error::Attendance automation failed! Check screenshots artifact."

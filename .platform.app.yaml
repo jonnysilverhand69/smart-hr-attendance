@@ -1,0 +1,28 @@
+# Platform.sh configuration (alternative deployment)
+name: 'hr-attendance'
+type: 'nodejs:18'
+
+disk: 512
+
+web:
+  commands:
+    start: "node docker-entrypoint.sh"
+
+mounts:
+  '/logs':
+    source: local
+    source_path: logs
+  '/screenshots':
+    source: local
+    source_path: screenshots
+  '/.config':
+    source: local
+    source_path: config
+
+variables:
+  env:
+    TZ: 'Asia/Kolkata'
+    NODE_ENV: 'production'
+    HEADLESS: 'true'
+    LOGIN_TIME: '09:30'
+    LOGOUT_TIME: '19:30'

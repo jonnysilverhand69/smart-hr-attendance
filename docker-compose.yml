@@ -1,0 +1,62 @@
+version: '3.8'
+
+services:
+  hr-attendance:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: hr-attendance-automation
+    restart: unless-stopped
+
+    # Environment variables
+    environment:
+      - TZ=Asia/Kolkata
+      - NODE_ENV=production
+      - HEADLESS=true
+      - SCREENSHOTS_ENABLED=true
+      - NOTIFICATIONS_ENABLED=true
+      - LOGIN_TIME=09:30
+      - LOGOUT_TIME=19:30
+      - RANDOM_DELAY=5
+
+    # Load credentials from .env file
+    env_file:
+      - .env
+
+    # Persistent volumes
+    volumes:
+      - ./logs:/app/logs
+      - ./screenshots:/app/screenshots
+      - ./.config:/app/.config
+      # Mount .env to ensure it's available
+      - ./.env:/app/.env:ro
+
+    # Resource limits (optional)
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 1G
+        reservations:
+          cpus: '0.5'
+          memory: 512M
+
+    # Logging configuration
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+    # Health check
+    healthcheck:
+      test: ["CMD", "sh", "-c", "ps aux | grep -q '[c]ron' || exit 1"]
+      interval: 1h
+      timeout: 30s
+      retries: 3
+      start_period: 10s
+
+# Networks (optional)
+networks:
+  default:
+    name: hr-automation-network
