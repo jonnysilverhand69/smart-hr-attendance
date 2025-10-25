@@ -1,18 +1,18 @@
-# 🤖 HR Attendance Automation
+# 🚀 Smart HR Attendance Assistant
 
 <div align="center">
 
-![GitHub stars](https://img.shields.io/github/stars/yourusername/hrpautomation?style=social)
-![GitHub forks](https://img.shields.io/github/forks/yourusername/hrpautomation?style=social)
+![GitHub stars](https://img.shields.io/github/stars/jonnysilverhand69/smart-hr-attendance?style=social)
+![GitHub forks](https://img.shields.io/github/forks/jonnysilverhand69/smart-hr-attendance?style=social)
 
 [![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-100%25_FREE-2088FF?logo=github-actions&logoColor=white)](#-github-actions-100-free)
 [![Docker](https://img.shields.io/badge/docker-ready-blue.svg)](https://www.docker.com/)
 [![Node](https://img.shields.io/badge/node-%3E%3D16-brightgreen.svg)](https://nodejs.org)
 [![License](https://img.shields.io/badge/license-ISC-blue.svg)](LICENSE)
 
-### **Never manually mark attendance again. Automate it in 2 minutes.**
+### **Boost your productivity by automating routine attendance tasks**
 
-*Login at 9:30 AM • Logout at 7:30 PM • Automatic notifications • 100% FREE with GitHub Actions*
+*Never miss attendance again • Smart scheduling • Instant notifications • 100% FREE with GitHub Actions*
 
 [🚀 Quick Start](#-quick-start-2-minutes) • [⚡ GitHub Actions](#-github-actions-100-free) • [🎨 Features](#-features) • [❓ FAQ](#-faq)
 
@@ -27,13 +27,13 @@
 7:30 PM (±5 min)  →  🚪 Auto Logout  →  ✅ Punched Out      →  📢 Notification
 ```
 
-**Works Monday-Saturday. Skips Sundays automatically.** 🏖️
+**Smart scheduling for Monday-Saturday. Respects your Sunday rest.** 🏖️
 
 ---
 
 ## ⚡ GitHub Actions (100% FREE!)
 
-**The easiest way. No server needed. Runs on GitHub for FREE!**
+**The most efficient deployment method. Runs reliably on GitHub's infrastructure at no cost!**
 
 <table>
 <tr>
@@ -131,8 +131,8 @@ Use [crontab.guru](https://crontab.guru/) to build cron expressions!
 
 ### Option 2: Local Setup
 ```bash
-git clone https://github.com/yourusername/hrpautomation.git
-cd hrpautomation
+git clone https://github.com/jonnysilverhand69/smart-hr-attendance.git
+cd smart-hr-attendance
 npm install
 npm run setup    # Interactive wizard with epic ASCII art!
 ```
@@ -164,7 +164,7 @@ Choose your deployment:
 ### 📢 Notifications
 - ✅ Discord webhooks
 - ✅ Google Chat webhooks
-- ✅ Fun facts with each message
+- ✅ Informative status updates
 - ✅ Success/error alerts
 - ✅ Rich formatting
 
@@ -173,12 +173,12 @@ Choose your deployment:
 <tr>
 <td>
 
-### 🎭 Epic UX
-- ✅ 5 random ASCII art designs
-- ✅ "FUCK HCL" splash screens
-- ✅ 25+ hilarious fun facts
+### 🎭 User Experience
+- ✅ Clean, intuitive interface
+- ✅ Professional ASCII art designs
+- ✅ Informative status messages
 - ✅ Beautiful CLI with colors
-- ✅ Loading animations
+- ✅ Progress indicators
 
 </td>
 <td>
@@ -200,31 +200,28 @@ Choose your deployment:
 
 **Setup Wizard:**
 ```
-███████╗██╗   ██╗ ██████╗██╗  ██╗
-██╔════╝██║   ██║██╔════╝██║ ██╔╝
-█████╗  ██║   ██║██║     █████╔╝
-██╔══╝  ██║   ██║██║     ██╔═██╗
-██║     ╚██████╔╝╚██████╗██║  ██╗
+🚀 HR Attendance Assistant Setup
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-      ██╗  ██╗ ██████╗██╗
-      ██║  ██║██╔════╝██║
-      ███████║██║     ██║
-      ██╔══██║██║     ██║
-      ██║  ██║╚██████╗███████╗
+Choose your deployment method:
+  ✓ GitHub Actions (Recommended - FREE)
+  ○ Docker (Local/VPS)
+  ○ macOS Scheduler
+  ○ Cloud (Railway/Render)
 
-    Automation is the new resistance
+Professional automation for busy professionals
 ```
 
-**Discord Notification:**
+**Notification Example:**
 ```
 🏢 HR Attendance System
 ✅ Login Successful
 
 User: john.doe@yourcompany.com
-Attendance marked successfully
+Time: 9:32 AM IST
+Status: Attendance marked successfully
 
-💀 Fun Fact: Manual attendance has claimed
-   more Monday mornings than alarm clocks
+📊 Your attendance is being tracked reliably
 ```
 
 ---
@@ -351,14 +348,16 @@ Public repos get unlimited minutes.
 </details>
 
 <details>
-<summary><b>Will I get caught?</b></summary>
+<summary><b>Is this secure and reliable?</b></summary>
 
-The script:
-- Uses random delays (±5 min) to look human
-- Runs from GitHub's IP (looks like remote work)
-- Has the same login pattern as manual
+Yes! The system:
+- Uses industry-standard automation (Playwright)
+- Implements random delays (±5 min) for natural timing
+- Runs from secure, professional cloud infrastructure
+- Follows the same login flow as manual access
+- Stores credentials securely in environment variables
 
-**Tip:** Use it responsibly. Don't abuse it.
+**Best Practice:** Use responsibly and in accordance with your organization's policies.
 
 </details>
 
@@ -425,79 +424,80 @@ The selectors might break. You can:
 
 ---
 
-## 🎉 Share This!
+## 🎉 Help Others Discover This Tool!
 
-If this saved you time:
+If this tool improved your productivity:
 
-- ⭐ **Star this repository** - It helps others discover it!
-- 🐦 **Tweet about it** - Share your automation story
-- 💬 **Tell colleagues** - Help them automate too
-- 📝 **Write a blog post** - Tutorial for others
-- 🎥 **Make a video** - Show the setup process
+- ⭐ **Star this repository** - Helps others find it
+- 💬 **Share with colleagues** - Help them save time too
+- 📝 **Write about your experience** - Share your automation journey
+- 🤝 **Contribute improvements** - Make it better for everyone
 
-**Sample tweet:**
+**Sample share message:**
 ```
-🤖 Just automated my HR attendance with GitHub Actions - 100% FREE!
+🚀 Discovered a great productivity tool: Smart HR Attendance Assistant
 
-No more manual login/logout 🎉
-
-✅ Fork repo
-✅ Add 3 secrets
-✅ Done!
+✅ Never miss attendance again
+✅ 100% FREE with GitHub Actions
+✅ Easy 2-minute setup
+✅ Works reliably Monday-Saturday
 
 Check it out: [your-repo-link]
 
-#automation #GitHub #productivity
+#productivity #automation #timemanagement
 ```
 
 ---
 
 ## 🤝 Contributing
 
-Contributions welcome! Ideas:
+We welcome contributions from the community! Ideas for improvement:
 
-- 🌐 Support for more HR portals
-- 🔔 New notification channels (Telegram, WhatsApp)
-- 🎨 More ASCII art designs
-- 💡 New fun facts
-- 📚 Better documentation
-- 🐛 Bug fixes
+- 🌐 Support for additional HR portal systems
+- 🔔 Integration with more notification platforms (Telegram, Slack, Teams)
+- 📊 Enhanced reporting and analytics features
+- 🔒 Advanced security features
+- 📚 Expanded documentation and tutorials
+- 🐛 Bug fixes and performance improvements
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelines.
 
 ---
 
 ## 📜 License
 
-ISC License - Do whatever you want!
+ISC License - Open source and free to use with attribution.
 
 ---
 
 ## ⚠️ Disclaimer
 
-This tool is for personal use only. Use responsibly and in accordance with your organization's policies. The authors are not responsible for any consequences of using this tool.
+This tool is designed to help busy professionals manage their attendance efficiently. Please use responsibly and ensure compliance with your organization's attendance policies and acceptable use guidelines. The authors and contributors are not responsible for any misuse or consequences arising from the use of this tool. By using this software, you agree to take full responsibility for its usage.
 
 ---
 
 ## 🙏 Credits
 
-Built with:
-- [Playwright](https://playwright.dev/) - Browser automation
-- [Inquirer](https://github.com/SBoudrias/Inquirer.js) - Interactive CLI
-- [Chalk](https://github.com/chalk/chalk) - Terminal colors
-- [Docker](https://www.docker.com/) - Containerization
-- Love and corporate rebellion ❤️🔥
+Built with industry-leading open source technologies:
+- [Playwright](https://playwright.dev/) - Reliable browser automation framework
+- [Node.js](https://nodejs.org/) - JavaScript runtime
+- [Inquirer](https://github.com/SBoudrias/Inquirer.js) - Interactive CLI interface
+- [Chalk](https://github.com/chalk/chalk) - Terminal styling
+- [Docker](https://www.docker.com/) - Container platform
+- [GitHub Actions](https://github.com/features/actions) - CI/CD automation
+
+Made with ❤️ by developers who value efficiency and automation
 
 ---
 
 <div align="center">
 
-### **Made with ❤️ for developers who automate everything**
+### **Empowering professionals through smart automation**
 
-⭐ **Star this repo** if it saved your time!
+⭐ **Star this repo** if it improved your productivity!
 
-![GitHub stars](https://img.shields.io/github/stars/yourusername/hrpautomation?style=social)
+![GitHub stars](https://img.shields.io/github/stars/jonnysilverhand69/smart-hr-attendance?style=social)
 
-**[⬆ Back to Top](#-hr-attendance-automation)**
+**[⬆ Back to Top](#-smart-hr-attendance-assistant)**
 
 </div>
