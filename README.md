@@ -486,7 +486,7 @@ Built with industry-leading open source technologies:
 - [Docker](https://www.docker.com/) - Container platform
 - [GitHub Actions](https://github.com/features/actions) - CI/CD automation
 
-Made with ❤️ by developers who value efficiency and automation
+🤖 *"Software of the Bot, By the Bot, for the People"*
 
 ---
 
