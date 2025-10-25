@@ -498,6 +498,14 @@ Made with ❤️ by developers who value efficiency and automation
 
 ![GitHub stars](https://img.shields.io/github/stars/jonnysilverhand69/smart-hr-attendance?style=social)
 
+---
+
+🤖 **[https://github.com/jonnysilverhand69/smart-hr-attendance](https://github.com/jonnysilverhand69/smart-hr-attendance)**
+
+*"Software of the Bot, By the Bot, for the People"*
+
+---
+
 **[⬆ Back to Top](#-smart-hr-attendance-assistant)**
 
 </div>
